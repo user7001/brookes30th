@@ -9,105 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #fff;
-      color: #000;
-      font-family: 'Lato', Arial, sans-serif;
-    }
-    .deadline {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      width: 100%;
-      background: #ffe600;
-      color: #000;
-      text-align: center;
-      padding: 11px 16px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .04em;
-    }
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 30;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: rgba(0,0,0,.55);
-    }
-    .modal {
-      width: min(520px, 100%);
-      background: #fff;
-      padding: 34px 30px 30px;
-      text-align: center;
-    }
-    .modal h2 {
-      margin: 0 0 12px;
-      font-size: 26px;
-      line-height: 1.05;
-    }
-    .modal p {
-      margin: 0 0 22px;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    .modal button {
-      border: 0;
-      background: #000;
-      color: #fff;
-      padding: 12px 18px;
-      font: 700 12px 'Lato', Arial, sans-serif;
-      letter-spacing: .04em;
-      cursor: pointer;
-    }
-    main {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 52px 24px 44px;
-    }
-    p {
-      margin: 0 0 22px;
-      font-size: 17px;
-      line-height: 1.58;
-    }
-    .signoff { margin-bottom: 8px; }
-    .god { margin-bottom: 24px; }
-    .actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .actions a {
-      display: inline-block;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 14px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .03em;
-    }
-    footer {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 24px 28px;
-      font-size: 8px;
-      line-height: 1.3;
-      letter-spacing: .08em;
-    }
-    @media (max-width: 600px) {
-      main { padding-top: 36px; }
-      p { font-size: 16px; }
-      .modal { padding: 30px 22px 24px; }
-    }
+    body { margin:0; background:#fff; color:#000; font-family:'Lato',Arial,sans-serif; }
+    .deadline { position:sticky; top:0; z-index:20; width:100%; background:#ffe600; color:#000; text-align:center; padding:11px 16px; font-size:13px; font-weight:700; letter-spacing:.04em; }
+    .modal-backdrop { position:fixed; inset:0; z-index:30; display:flex; align-items:center; justify-content:center; padding:24px; background:rgba(0,0,0,.55); }
+    .modal { width:min(520px,100%); background:#fff; padding:34px 30px 30px; text-align:center; }
+    .modal h2 { margin:0 0 12px; font-size:26px; line-height:1.05; }
+    .modal p { margin:0 0 22px; font-size:16px; line-height:1.5; }
+    .modal button { border:0; background:#000; color:#fff; padding:12px 18px; font:700 12px 'Lato',Arial,sans-serif; letter-spacing:.04em; cursor:pointer; }
+    main { max-width:680px; margin:0 auto; padding:52px 24px 44px; }
+    p { margin:0 0 22px; font-size:17px; line-height:1.58; }
+    .signoff { margin-bottom:8px; }
+    .god { margin-bottom:24px; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; }
+    .actions a { display:inline-block; background:#000; color:#fff; text-decoration:none; padding:10px 14px; font-size:11px; font-weight:700; letter-spacing:.03em; }
+    footer { max-width:680px; margin:0 auto; padding:0 24px 28px; font-size:8px; line-height:1.3; letter-spacing:.08em; }
+    @media (max-width:600px) { main{padding-top:36px;} p{font-size:16px;} .modal{padding:30px 22px 24px;} }
   </style>
 </head>
 <body>
   <div class="deadline">⚠️ DEADLINE TODAY — PLEASE SEND YOUR VIDEO ASAP!</div>
-
   <div class="modal-backdrop" id="deadlineModal">
     <div class="modal">
       <h2>PLEASE SEND YOUR VIDEO TODAY!</h2>
@@ -115,25 +35,23 @@
       <button type="button" onclick="document.getElementById('deadlineModal').style.display='none'">GOT IT — I'LL SEND IT</button>
     </div>
   </div>
-
+  <header style="text-align:center;padding:34px 24px 22px;">
+    <div style="margin-bottom:8px;color:#666;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;">WE NEED A FAVOR FROM YOU FOR</div>
+    <h1 style="margin:0;font-size:28px;line-height:1.2;font-weight:700;">BROOKE'S 30TH BIRTHDAY</h1>
+  </header>
+  <div style="width:100%;"><img src="collage.jpg" alt="Brooke" style="display:block;width:100%;height:auto;max-width:900px;margin:0 auto;"></div>
   <main>
     <p>It’s Brooke Mason’s 30th birthday this Friday! This Saturday is a family/friends party in Georgia. A video is being made for her to be shown at the party that gives everybody a brief moment to express their love and gratitude for her in a fun/creative way through film and photos.</p>
-
     <p>If you can squeeze a few minutes into your schedule, record and send a selfie video or voice memo talking about 1 or maybe 2 things you love the most about Brooke, that would be truly epic. It can’t be longer than 60 seconds, as she has literally 1,925,801,615 friends and fitting everything into the cut will require some magic. If you can’t, or would prefer not to send a video/voice memo at all, shame on you. [It’s okay.]</p>
-
     <p>You can record this video or audio in your car, living room, porch, a store, your kitchen, really anywhere. Doesn’t matter. Just make sure it’s max 60 seconds, honest, and true to you and her, and then just send the raw file (no links) from your photo roll to the email below OR upload it directly to the Google Drive folder.</p>
-
     <p>Please do this as soon as earthly possible. We only have 2 days for this video to be presentable, so our editor, Isaac (me), will be working OT to get this done. This needs to be excellent, and we want Brooke to have the best birthday yet.</p>
-
     <p class="signoff">Thank you so much for your love and help.</p>
     <p class="god">God bless you!</p>
-
     <div class="actions">
       <a href="https://drive.google.com/drive/folders/1-vyHJAEmpvOdwQHJWza8YZvUE-7vhZ53?usp=drive_link" target="_blank" rel="noopener">Upload to Google Drive</a>
       <a href="mailto:itsisaaclee@gmail.com?subject=Brooke%27s%20Birthday%20Video">Send via Email</a>
     </div>
   </main>
-
   <footer>[BELIEVE IT OR NOT, THIS WAS NOT CREATED WITH AI. ALL HUMAN-MADE. - IL]</footer>
 </body>
 </html>
