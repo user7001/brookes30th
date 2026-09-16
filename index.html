@@ -1,81 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
-<title>Brooke's 30th Birthday Video</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  :root { --bg:#fff; --fg:#000; --muted:#666; --alert:#ffd400; }
-  * { box-sizing:border-box; }
-  html { background:var(--bg); }
-  body { margin:0; background:var(--bg); color:var(--fg); font-family:Lato,Helvetica,Arial,sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
-  .deadline { position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:center; gap:9px; padding:11px 16px; background:var(--alert); color:#000; text-align:center; font-size:12px; line-height:1.3; font-weight:700; letter-spacing:.7px; text-transform:uppercase; box-shadow:0 1px 8px rgba(0,0,0,.12); }
-  .deadline-icon { font-size:17px; line-height:1; }
-  .header { text-align:center; padding:34px 24px 22px; }
-  .kicker { margin-bottom:8px; color:var(--muted); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; white-space:nowrap; }
-  h1 { margin:0; font-size:28px; line-height:1.2; font-weight:700; }
-  .hero { width:100%; }
-  .hero img { display:block; width:100%; height:auto; }
-  .content { width:100%; max-width:680px; margin:0 auto; padding:30px 24px 64px; }
-  p { margin:0 0 20px; font-size:16px; }
-  .cta { display:flex; flex-direction:column; gap:12px; margin:30px 0 20px; }
-  .btn { display:block; width:100%; padding:14px 18px; border:2px solid var(--fg); border-radius:8px; background:var(--fg); color:var(--bg); text-align:center; text-decoration:none; font-size:14px; font-weight:700; letter-spacing:.4px; text-transform:uppercase; }
-  .btn.secondary { background:var(--bg); color:var(--fg); }
-  .signoff { margin-top:-20px; padding-top:0; border-top:none; }
-  .signoff p { margin:0; }
-  .tagline { margin:34px 0 0; color:var(--muted); font-size:9px; line-height:1.3; letter-spacing:.8px; text-align:center; text-transform:uppercase; }
-  .landing-alert { position:fixed; inset:0; z-index:50; display:flex; align-items:center; justify-content:center; padding:24px; background:rgba(0,0,0,.68); }
-  .landing-alert-card { width:min(520px,100%); padding:30px 26px 26px; border-radius:14px; background:#fff; color:#000; text-align:center; box-shadow:0 18px 60px rgba(0,0,0,.35); }
-  .landing-alert-icon { display:block; margin-bottom:10px; font-size:38px; line-height:1; }
-  .landing-alert h2 { margin:0 0 10px; font-size:27px; line-height:1.15; }
-  .landing-alert p { margin:0 auto 20px; max-width:410px; font-size:16px; line-height:1.45; }
-  .landing-alert button { width:100%; padding:14px 18px; border:2px solid #000; border-radius:8px; background:#000; color:#fff; font:700 14px Lato,Helvetica,Arial,sans-serif; letter-spacing:.5px; text-transform:uppercase; cursor:pointer; }
-  @media (min-width:560px) {
-    .hero { max-width:900px; margin:0 auto; }
-    .cta { flex-direction:row; }
-    .btn { flex:1; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brooke's 30th Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: #000;
+      font-family: 'Lato', Arial, sans-serif;
+    }
+    .deadline {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      width: 100%;
+      background: #ffe600;
+      color: #000;
+      text-align: center;
+      padding: 11px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0,0,0,.55);
+    }
+    .modal {
+      width: min(520px, 100%);
+      background: #fff;
+      padding: 34px 30px 30px;
+      text-align: center;
+    }
+    .modal h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      line-height: 1.05;
+    }
+    .modal p {
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .modal button {
+      border: 0;
+      background: #000;
+      color: #fff;
+      padding: 12px 18px;
+      font: 700 12px 'Lato', Arial, sans-serif;
+      letter-spacing: .04em;
+      cursor: pointer;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 52px 24px 44px;
+    }
+    p {
+      margin: 0 0 22px;
+      font-size: 17px;
+      line-height: 1.58;
+    }
+    .signoff { margin-bottom: 8px; }
+    .god { margin-bottom: 24px; }
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .actions a {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+    footer {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 28px;
+      font-size: 8px;
+      line-height: 1.3;
+      letter-spacing: .08em;
+    }
+    @media (max-width: 600px) {
+      main { padding-top: 36px; }
+      p { font-size: 16px; }
+      .modal { padding: 30px 22px 24px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="deadline" role="alert"><span class="deadline-icon">⚠️</span><span>DEADLINE TODAY — PLEASE SEND YOUR VIDEO ASAP!</span></div>
+  <div class="deadline">⚠️ DEADLINE TODAY — PLEASE SEND YOUR VIDEO ASAP!</div>
 
-  <div class="landing-alert" id="landingAlert" role="dialog" aria-modal="true" aria-labelledby="deadlineTitle">
-    <div class="landing-alert-card">
-      <span class="landing-alert-icon">⚠️</span>
-      <h2 id="deadlineTitle">PLEASE SEND YOUR VIDEO TODAY!</h2>
-      <p>We’re cutting the birthday video now. If you haven’t sent yours yet, please send it <strong>ASAP today</strong> so we can get it into the final edit.</p>
-      <button type="button" onclick="closeLandingAlert()">GOT IT — I'LL SEND IT</button>
+  <div class="modal-backdrop" id="deadlineModal">
+    <div class="modal">
+      <h2>PLEASE SEND YOUR VIDEO TODAY!</h2>
+      <p>We’re cutting the birthday video now. Please send your video or voice memo ASAP today so we can get Brooke’s film finished.</p>
+      <button type="button" onclick="document.getElementById('deadlineModal').style.display='none'">GOT IT — I'LL SEND IT</button>
     </div>
   </div>
 
-  <header class="header">
-    <div class="kicker">WE NEED A FAVOR FROM YOU FOR</div>
-    <h1>BROOKE'S 30TH BIRTHDAY</h1>
-  </header>
-  <div class="hero"><img src="collage.jpg" alt="Brooke"></div>
-  <main class="content">
+  <main>
     <p>It’s Brooke Mason’s 30th birthday this Friday! This Saturday is a family/friends party in Georgia. A video is being made for her to be shown at the party that gives everybody a brief moment to express their love and gratitude for her in a fun/creative way through film and photos.</p>
+
     <p>If you can squeeze a few minutes into your schedule, record and send a selfie video or voice memo talking about 1 or maybe 2 things you love the most about Brooke, that would be truly epic. It can’t be longer than 60 seconds, as she has literally 1,925,801,615 friends and fitting everything into the cut will require some magic. If you can’t, or would prefer not to send a video/voice memo at all, shame on you. [It’s okay.]</p>
+
     <p>You can record this video or audio in your car, living room, porch, a store, your kitchen, really anywhere. Doesn’t matter. Just make sure it’s max 60 seconds, honest, and true to you and her, and then just send the raw file (no links) from your photo roll to the email below OR upload it directly to the Google Drive folder.</p>
+
     <p>Please do this as soon as earthly possible. We only have 2 days for this video to be presentable, so our editor, Isaac (me), will be working OT to get this done. This needs to be excellent, and we want Brooke to have the best birthday yet.</p>
-    <p>Thank you so much for your love and help.</p>
-    <div class="signoff"><p>God bless you!</p></div>
-    <div class="cta">
-      <a class="btn" href="https://drive.google.com/drive/folders/1-vyHJAEmpvOdwQHJWza8YZvUE-7vhZ53?usp=drive_link" target="_blank" rel="noopener">Upload to Google Drive</a>
-      <a class="btn secondary" href="mailto:itsisaaclee@gmail.com?subject=Brooke%27s%20Birthday%20Video">Send via Email</a>
+
+    <p class="signoff">Thank you so much for your love and help.</p>
+    <p class="god">God bless you!</p>
+
+    <div class="actions">
+      <a href="https://drive.google.com/drive/folders/1-vyHJAEmpvOdwQHJWza8YZvUE-7vhZ53?usp=drive_link" target="_blank" rel="noopener">Upload to Google Drive</a>
+      <a href="mailto:itsisaaclee@gmail.com?subject=Brooke%27s%20Birthday%20Video">Send via Email</a>
     </div>
-    <p class="tagline">[BELIEVE IT OR NOT, THIS WAS NOT CREATED WITH AI. ALL HUMAN-MADE. - IL]</p>
   </main>
 
-  <script>
-    function closeLandingAlert() {
-      document.getElementById('landingAlert').style.display = 'none';
-    }
-  </script>
+  <footer>[BELIEVE IT OR NOT, THIS WAS NOT CREATED WITH AI. ALL HUMAN-MADE. - IL]</footer>
 </body>
 </html>
